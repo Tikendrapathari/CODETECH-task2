@@ -1,0 +1,64 @@
+class GradeTracker:
+    def __init__(self):
+        self.grades = []
+
+    def add_grade(self, subject, grade):
+        self.grades.append({'subject': subject, 'grade': grade})
+
+    def calculate_average(self):
+        total = sum(item['grade'] for item in self.grades)
+        count = len(self.grades)
+        return total / count if count != 0 else 0
+
+    def get_letter_grade(self, average):
+        if average >= 90:
+            return 'A'
+        elif average >= 80:
+            return 'B'
+        elif average >= 70:
+            return 'C'
+        elif average >= 60:
+            return 'D'
+        else:
+            return 'F'
+
+    def get_gpa(self, average):
+        if average >= 90:
+            return 4.0
+        elif average >= 80:
+            return 3.0
+        elif average >= 70:
+            return 2.0
+        elif average >= 60:
+            return 1.0
+        else:
+            return 0.0
+
+    def display_grades(self):
+        print("\nGrades:")
+        for item in self.grades:
+            print(f"Subject: {item['subject']}, Grade: {item['grade']}")
+
+    def display_summary(self):
+        average = self.calculate_average()
+        letter_grade = self.get_letter_grade(average)
+        gpa = self.get_gpa(average)
+        self.display_grades()
+        print(f"\nAverage Grade: {average:.2f}")
+        print(f"Letter Grade: {letter_grade}")
+        print(f"GPA: {gpa:.2f}")
+
+def main():
+    tracker = GradeTracker()
+    while True:
+        subject = input("Enter subject (or 'done' to finish): ")
+        if subject.lower() == 'done':
+            break
+        grade = float(input(f"Enter grade for {subject}: "))
+        tracker.add_grade(subject, grade)
+    
+    tracker.display_summary()
+
+if __name__ == "__main__":
+    main()
+    
