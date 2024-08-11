@@ -6,7 +6,9 @@ PROJECT- Name- Tikendra Pathe Company- CODETECH IT SOLUTION ID- CT08DS5682 Durat
 
 OVERVIEW OF THE PROJECT
 
-PROJECT- 3.0.1 Objective:
+PROJECT-  Student Grades Management System
+
+3.0.1 Objective:
 
 The goal of this project is to develop a Python program that tracks and manages student grades. The
 program will allow users (teachers, students, or administrators) to input grades for different subjects or
