@@ -20,5 +20,6 @@ Input Grades :
 Allow users to input grades for multiple subjects or assignments. Support different grading scales (percentage, points, etc.). Handle different types of assessments (exams, quizzes, assignments, etc.). Calculat
 
 Average Grade:
+
 Automatically calculate the average grade for each student based on the entered
 grades. Provide options to weight different assignments or subjects differently
